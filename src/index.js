@@ -19,22 +19,16 @@ const port = 3000;
 
 const app = express();
 
+const assetsBaseUrl = baseUrl + 'assets/';
+const baseFilePath = __dirname + '/../assets/';
+app.use(assetsBaseUrl + 'kbl-css/', express.static(baseFilePath + 'kbl-css'));
+
 let nunEnv = nunjucks.configure(__dirname + '/views', {
   autoescape: true,
   express: app
 });
 
 nunEnv.addExtension('SetAsyncExtension', new SetAsyncExtension());
-
-app.use(baseUrl + 'scss', sass({
-    /* Options */
-    src: path.join(__dirname, 'scss'),
-    includePaths: ['scss', 'views'],
-    dest: path.join(__dirname, '/../public/css'),
-    debug: true,
-    outputStyle: 'compressed',
-    prefix:  '/css'  // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
-}));
 
 // Pages
 app.get(baseUrl, (req, res) => {
