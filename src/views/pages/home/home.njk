@@ -4,7 +4,7 @@
   <article class="container-fluid p-0 header-container">
 
     <section class="row justify-content-center mt-5 mb-3">
-      <div class="col-6 header-content text-center">
+      <div class="col-12 col-sm-10 col-lg-8 col-xl-6 header-content text-center">
         <h3>
           <b>Utah State University Bioinformatics Lab</b>
         </h3>
@@ -12,8 +12,8 @@
     </section>
 
     <section class="row justify-content-center mt-5 mb-3">
-      <div class="col-6 header-content text-center">
-        <p>
+      <div class="col-12 col-sm-10 col-lg-6 header-content">
+        <p class="px-3">
           Following recent advances in technology and the development of ultra high-throughput research, the field
           of biotechnology is beginning to suffer from data overload, and thus, applications of Bioinformatics &
           Computational Biology have expanded with these so-called ‘-omic‘ technologies. This discipline now sits as
@@ -23,31 +23,40 @@
       </div>
     </section>
 
-    <section class="row justify-content-center mt-5 px-3">
-      <div class="col-4">
-        <a class="site-link bioinfo text-center py-2" href="http://bioinfo.usu.edu" target="_blank" rel="noreferrer noopener">
-          USU Bioinformatics Research
+    <section class="row justify-content-center mt-5 px-3 card-ribbon py-4">
+      <div class="col-lg-4 col-12 col-sm-10 col-md-8">
+        <a class="site-card p-3 h-100 d-block" href="http://bioinfo.usu.edu" target="_blank">
+          <div class="site-link bioinfo text-center py-2">
+            USU Bioinformatics Research
+          </div>
+          <p class="site-desc">
+            See what research we're currently working on, what research we've published, or even join our team! The button above will
+            take you to our research website, where we also host all tools developed in our own lab. It's also the best place to keep up
+            on events in the lab!
+          </p>
         </a>
-        <p class="site-desc">
-          See what research we're currently working on, what research we've published, or even join our team! The button above will
-          take you to our research website, where we also host all tools developed in our own lab.
-        </p>
       </div>
 
-      <div class="col-4 text-center header-content">
+      <div class="col-1">
+
+      </div>
+
+      <div class="col-lg-4 d-none pb-5 my-sm-0 text-center header-content">
         {% include 'components/animations/dna1.njk' %}
       </div>
 
-      <div class="col-4">
-        <a class="site-link bioinfocore text-center py-2" href="http://bioinfocore.usu.edu" target="_blank" rel="noreferrer noopener">
-          USU Bioinfocore
-        </a>
-        <p class="site-desc">
-          There's a reason we keep developing new tools at the KAABiL: finding new ways to process -omics data is an endless task.
-          If you need data processed, our Bioinfocore website has details on what kinds of processing we do, as well as manuals for
-          users on our HPC. You can also find out about our system specifications as well as what software we have installed on
-          our HPC.
-        </p>
+      <div class="col-lg-4 col-12 col-md-8 col-sm-10">
+        <div class="site-card p-3 h-100">
+          <a class="site-link bioinfocore text-center py-2" href="http://bioinfocore.usu.edu" target="_blank" rel="noreferrer noopener">
+            USU Bioinfocore
+          </a>
+          <p class="site-desc">
+            There's a reason we keep developing new tools at the KAABiL: finding new ways to process -omics data is an endless task.
+            If you need data processed, our Bioinfocore website has details on what kinds of processing we do, as well as manuals for
+            users on our HPC. You can also find out about our system specifications as well as what software we have installed on
+            our HPC.
+          </p>
+        </div>
       </div>
     </section>
   </article>

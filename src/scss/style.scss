@@ -19,20 +19,21 @@ p {
   overflow-y: hidden;
   width: 100vw;
   height: 100vh;
+  background: #fff;
 }
 
 .header-content {
   color: $color-text-main;
 }
 
-@mixin site-link($color, $bg) {
+@mixin site-link($color) {
   border: 1px solid $color;
   color: $color;
+}
 
-  &:hover {
-    background: $bg;
-    border-color: $bg;
-  }
+@mixin site-link-h($bg) {
+  background: $bg;
+  border-color: $bg;
 }
 
 .site-link {
@@ -46,15 +47,40 @@ p {
   font-size: 120%;
 
   &.bioinfo {
-    @include site-link($color-bioinfo, $color-bioinfo-bg);
+    @include site-link($color-bioinfo);
   }
 
   &.bioinfocore {
-    @include site-link($color-bioinfocore, $color-bioinfocore-bg);
+    @include site-link($color-bioinfocore);
   }
 }
 
 .site-desc {
   color: $color-text-soft;
   padding: 15px 12px;
+}
+
+.card-ribbon {
+  background: #e3e3e3;
+}
+
+.site-card {
+  background: #fff;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24);
+
+    .site-link.bioinfo {
+      @include site-link-h($color-bioinfo-bg);
+    }
+
+    .site-link.bioinfocore {
+      @include site-link-h($color-bioinfocore-bg);
+    }
+  }
 }
