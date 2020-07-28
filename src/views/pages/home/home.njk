@@ -1,5 +1,54 @@
 {% extends 'pages/template.njk' %}
 
 {% block content %}
-  <h1>Head</h1>
+  <article class="container-fluid p-0 header-container">
+
+    <section class="row justify-content-center mt-5 mb-3">
+      <div class="col-6 header-content text-center">
+        <h3>
+          <b>Utah State University Bioinformatics Lab</b>
+        </h3>
+      </div>
+    </section>
+
+    <section class="row justify-content-center mt-5 mb-3">
+      <div class="col-6 header-content text-center">
+        <p>
+          Following recent advances in technology and the development of ultra high-throughput research, the field
+          of biotechnology is beginning to suffer from data overload, and thus, applications of Bioinformatics &
+          Computational Biology have expanded with these so-called ‘-omic‘ technologies. This discipline now sits as
+          an umbrella over biotechnology. The Utah State University Bioinformatics Lab aims to provide academic
+          researchers with high-performance computing resources. More information on our other websites below.
+        </p>
+      </div>
+    </section>
+
+    <section class="row justify-content-center mt-5 px-3">
+      <div class="col-4">
+        <a class="site-link bioinfo text-center py-2" href="http://bioinfo.usu.edu" target="_blank" rel="noreferrer noopener">
+          USU Bioinformatics Research
+        </a>
+        <p class="site-desc">
+          See what research we're currently working on, what research we've published, or even join our team! The button above will
+          take you to our research website, where we also host all tools developed in our own lab.
+        </p>
+      </div>
+
+      <div class="col-4 text-center header-content">
+        {% include 'components/animations/dna1.njk' %}
+      </div>
+
+      <div class="col-4">
+        <a class="site-link bioinfocore text-center py-2" href="http://bioinfocore.usu.edu" target="_blank" rel="noreferrer noopener">
+          USU Bioinfocore
+        </a>
+        <p class="site-desc">
+          There's a reason we keep developing new tools at the KAABiL: finding new ways to process -omics data is an endless task.
+          If you need data processed, our Bioinfocore website has details on what kinds of processing we do, as well as manuals for
+          users on our HPC. You can also find out about our system specifications as well as what software we have installed on
+          our HPC.
+        </p>
+      </div>
+    </section>
+  </article>
 {% endblock %}

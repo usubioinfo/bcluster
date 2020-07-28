@@ -1,5 +1,60 @@
 @import './colors';
+@import './globals';
+
+@import './animations/dna1';
 
 body {
-  font-family: 'Quicksand', sans-serif!important;
+  font-family: 'Mulish', sans-serif!important;
+  overflow-y: hidden;
+}
+
+p {
+  color: $color-text-main;
+  font-size: 105%;
+  font-weight: $font-weight-medium;
+}
+
+.header-container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-content {
+  color: $color-text-main;
+}
+
+@mixin site-link($color, $bg) {
+  border: 1px solid $color;
+  color: $color;
+
+  &:hover {
+    background: $bg;
+    border-color: $bg;
+  }
+}
+
+.site-link {
+  border-radius: $border-radius;
+  transition: 0.3s;
+  cursor: pointer;
+  text-decoration: none!important;
+  display: inline-block;
+  width: 100%!important;
+  font-weight: $font-weight-heavy;
+  font-size: 120%;
+
+  &.bioinfo {
+    @include site-link($color-bioinfo, $color-bioinfo-bg);
+  }
+
+  &.bioinfocore {
+    @include site-link($color-bioinfocore, $color-bioinfocore-bg);
+  }
+}
+
+.site-desc {
+  color: $color-text-soft;
+  padding: 15px 12px;
 }
