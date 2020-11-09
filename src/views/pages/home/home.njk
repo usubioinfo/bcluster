@@ -45,19 +45,20 @@
         {% include 'components/animations/dna1.njk' %}
       </div>
 
-      <div class="col-lg-4 col-12 col-md-8 col-sm-10">
-        <div class="site-card p-3 h-100">
-          <a class="site-link bioinfocore text-center py-2" href="http://bioinfocore.usu.edu" target="_blank" rel="noreferrer noopener">
+      <div class="col-lg-4 col-12 col-sm-10 col-md-8">
+        <a class="site-card p-3 h-100 d-block" href="http://bioinfocore.usu.edu" target="_blank" rel="noreferrer noopener">
+          <div class="site-link bioinfocore text-center py-2">
             USU Bioinfocore
-          </a>
+          </div>
           <p class="site-desc">
             There's a reason we keep developing new tools at the KAABiL: finding new ways to process -omics data is an endless task.
             If you need data processed, our Bioinfocore website has details on what kinds of processing we do, as well as manuals for
             users on our HPC. You can also find out about our system specifications as well as what software we have installed on
             our HPC.
           </p>
-        </div>
+        </a>
       </div>
+
     </section>
   </article>
 {% endblock %}
