@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const nunjucks = require('nunjucks');
-const sass = require('node-sass-middleware');
 const SetAsyncExtension = require('nunjucks-setasync');
 const rateLimit = require('express-rate-limit');
 
@@ -22,6 +21,8 @@ const app = express();
 const assetsBaseUrl = baseUrl + 'assets/';
 const baseFilePath = __dirname + '/../assets/';
 app.use(assetsBaseUrl + 'kbl-css/', express.static(baseFilePath + 'kbl-css'));
+
+app.use(baseUrl + 'public/css', express.static(path.join(__dirname, '/../public/css')));
 
 let nunEnv = nunjucks.configure(__dirname + '/views', {
   autoescape: true,
