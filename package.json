@@ -12,7 +12,9 @@
     "dev-scss": "npm-run-all -p sass:*",
     "dev-js": "nodemon src/index.js",
     "update": "git pull origin master",
-    "production": "NODE_ENV=test node src/index.js"
+    "production": "NODE_ENV=test node src/index.js",
+    "docker:build": "docker build -t testing/biocluster .",
+    "docker:test": "docker run -p 3000:3000 -d testing/biocluster"
   },
   "author": "Shelby McCowan",
   "license": "ISC",
